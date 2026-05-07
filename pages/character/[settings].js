@@ -41,9 +41,9 @@ export default function Index ({ defaultSettings }) {
   return (
     <div>
       <Head>
-        <title>Retro Sprite Creator</title>
+        <title>Modern Town Character Creator</title>
         <link rel="icon" href={faviconURL} />
-        <meta property="og:title" content="Retro Sprite Creator" />
+        <meta property="og:title" content="Modern Town Character Creator" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Quickly create excellent Sprites for your game here, for free!" />
         <meta property="og:image" content={`https://retro-image-server.nihey.org/og-image/${settingsString}`} />
