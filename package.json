@@ -1,0 +1,45 @@
+{
+  "name": "retro-sprite-creator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "server": "node -r esm ./image-server/index.js",
+    "dev-server": "nodemon -r esm ./image-server/index.js",
+    "deploy-server": "rsync --delete -azv . root@maridia.nihey.org:/var/www/retro-sprite-creator --exclude built-images/ --exclude public/images/thumbnails --exclude .git --exclude .next --exclude node_modules/ && ssh root@maridia.nihey.org \"cd /var/www/retro-sprite-creator && docker-compose up -d --build image-server\"",
+    "backup-built-images": "rsync -azv root@maridia.nihey.org:/var/www/retro-sprite-creator/built-images/ ~/backups/retro-sprite-creator/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "classnames": "^2.2.6",
+    "clipboard-copy": "^3.1.0",
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "mkdirp": "^1.0.4",
+    "move-file": "^2.0.0",
+    "next": "^14.2.13",
+    "nextjs-redirect": "^2.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-toastify": "^6.0.5",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.79.1",
+    "short-hash": "^1.0.0",
+    "styled-jsx-plugin-sass": "^1.0.0",
+    "visibilityjs": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "graceful-fs": "^4.2.4",
+    "nodemon": "^2.0.4"
+  }
+}

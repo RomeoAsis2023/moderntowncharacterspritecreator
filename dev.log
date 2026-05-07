@@ -1,0 +1,32 @@
+
+> retro-sprite-creator@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.13
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+   Disabled SWC as replacement for Babel because of custom Babel configuration ".babelrc" https://nextjs.org/docs/messages/swc-disabled
+ ✓ Ready in 1880ms
+   Using external babel configuration from C:\Users\meoas\OneDrive\Desktop\retro-sprite-creator-master\.babelrc
+[styled-jsx] Loading plugin from path: C:\Users\meoas\OneDrive\Desktop\retro-sprite-creator-master\node_modules\styled-jsx-plugin-sass\index.js
+ ○ Compiling / ...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ⨯ ./node_modules/next/dist/client/next-dev.js
+Error: Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime (147)
+For more information on which environments are supported please see:
+https://github.com/sass/node-sass/releases/tag/v9.0.0
+ ✓ Compiled /_error in 9.2s (362 modules)
+ GET / 500 in 27545ms
+ GET / 302 in 199ms
+ ○ Compiling /character/[settings] ...
+ ⨯ ./src/components/CharacterGrid.js
+TypeError: plugins is not a function
+Import trace for requested module:
+./src/components/CharacterGrid.js
+ GET /character/new 500 in 3187ms
+ GET /character/new 500 in 22ms
+ GET /character/new 500 in 32ms
+ GET /character/new 500 in 31ms
